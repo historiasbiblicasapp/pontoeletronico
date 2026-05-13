@@ -1,0 +1,22 @@
+{
+  "name": "LF Vendas",
+  "short_name": "LF Vendas",
+  "description": "Sistema de gestão de vendas de roupas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/tiaxv2b.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.imgur.com/tiaxv2b.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
