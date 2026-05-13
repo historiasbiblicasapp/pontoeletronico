@@ -10,7 +10,7 @@
 -- ============================================================
 -- 1. EXTENSÕES
 -- ============================================================
-CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "pgcrypto" WITH SCHEMA public;
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- ============================================================
