@@ -10,7 +10,7 @@
 -- ============================================================
 -- 1. EXTENSÕES
 -- ============================================================
-CREATE EXTENSION IF NOT EXISTS "pgcrypto" WITH SCHEMA public;
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- ============================================================
@@ -596,7 +596,7 @@ BEGIN
   ) VALUES (
     v_instance_id, gen_random_uuid(), 'authenticated', 'authenticated',
     'master@pontodigital.com',
-    crypt('Master@2026', gen_salt('bf')),
+    extensions.crypt('Master@2026', extensions.gen_salt('bf')),
     NOW(), '', NOW(), '',
     '{"provider":"email","providers":["email"]}',
     '{"role":"master"}',
@@ -618,7 +618,7 @@ BEGIN
   ) VALUES (
     v_instance_id, gen_random_uuid(), 'authenticated', 'authenticated',
     'admin@exemplo.com',
-    crypt('Admin@2026', gen_salt('bf')),
+    extensions.crypt('Admin@2026', extensions.gen_salt('bf')),
     NOW(), '', NOW(), '',
     '{"provider":"email","providers":["email"]}',
     '{"role":"admin"}',
